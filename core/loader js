@@ -1,0 +1,66 @@
+/*
+====================================================
+SilverQR Loader
+Version : 1.0.0
+====================================================
+*/
+
+export default class Loader {
+
+    static async json(path) {
+
+        const response = await fetch(
+
+            path + "?t=" + Date.now(),
+
+            {
+
+                cache: "no-store"
+
+            }
+
+        );
+
+        if (!response.ok) {
+
+            throw new Error(
+
+                "Cannot load : " + path
+
+            );
+
+        }
+
+        return await response.json();
+
+    }
+
+    static async text(path) {
+
+        const response = await fetch(
+
+            path + "?t=" + Date.now(),
+
+            {
+
+                cache: "no-store"
+
+            }
+
+        );
+
+        if (!response.ok) {
+
+            throw new Error(
+
+                "Cannot load : " + path
+
+            );
+
+        }
+
+        return await response.text();
+
+    }
+
+}
