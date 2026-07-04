@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>SilverQR Test</title>
+
+</head>
+
+<body>
+
+<h2>SilverQR Core Test</h2>
+
+<script type="module">
+
+import Storage from "./core/storage.js";
+import Utils from "./core/utils.js";
+
+Storage.save("nama","Teddy");
+
+console.log(Storage.load("nama"));
+
+console.log(Utils.currentDay());
+
+console.log(Utils.currentTime());
+
+</script>
+
+</body>
+
+</html>
