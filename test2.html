@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Scheduler Test</title>
+
+</head>
+
+<body>
+
+<script type="module">
+
+import Loader from "./core/loader.js";
+import Scheduler from "./core/scheduler.js";
+
+const rules = await Loader.json("./config/rules.json");
+
+const scheduler = new Scheduler(rules);
+
+console.log(
+
+scheduler.getCurrentRule()
+
+);
+
+</script>
+
+</body>
+
+</html>
